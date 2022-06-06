@@ -1,70 +1,109 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ***Infinite Landscape Font-End***
+---------------------------------
 
-## Available Scripts
+---------------------------------
+## We are deployed on NETLIFY!!
 
-In the project directory, you can run:
+[ADD NETLIFY LINK HERE](https://guarded-peak-17951.herokuapp.com/api-docs)
 
-### `npm start`
+---------------------------------
+## Web Application
+***[Explain your app, should be at least a paragraph. What does it do? Why should I use? Sell your product!]***
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---------------------------------
 
-### `npm test`
+## Tools Used
+- VSCode
+- "@emotion/react": "^11.9.0",
+- "@emotion/styled": "^11.8.1",
+- "@mui/icons-material": "^5.8.0",
+- "@mui/material": "^5.8.1",
+- "@reduxjs/toolkit": "^1.8.1",
+- "@testing-library/jest-dom": "^5.16.4",
+- "@testing-library/react": "^13.2.0",
+- "@testing-library/user-event": "^13.5.0",
+- "axios": "^0.27.2",
+- "bootstrap": "^5.1.3",
+- "jsdoc": "^3.6.10",
+- "jsdoc-toolkit": "^0.0.2",
+- "react": "^18.1.0",
+- "react-bootstrap": "^2.4.0",
+- "react-dom": "^18.1.0",
+- "react-graph-vis": "^1.0.7",
+- "react-redux": "^8.0.2",
+- "react-router-dom": "^6.3.0",
+- "react-scripts": "5.0.1",
+- "redux": "^4.2.0",
+- "redux-devtools-extension": "^2.13.9",
+- "web-vitals": "^2.1.4"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---------------------------------
 
-### `npm run build`
+## Recent Updates
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### V 1.0
+- deployment 5/27
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---------------------------
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+Clone this repository to your local machine.
+```
+$ git clone https://github.com/YourRepo/YourProject.git
+```
+```
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Run testing suites with NPM test
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---------------------------------
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
+[Click me!](https://guarded-peak-17951.herokuapp.com/api-docs)
+---------------------------
+## Data Flow (Frontend, Backend, REST API)
+***[Add a clean and clear explanation of what the data flow is. Walk me through it.]***
+![Data Flow Diagram](/assets/img/Flowchart.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---------------------------
+## Data Model
 
-## Learn More
+### Overall Project Schema
+***[Add a description of your DB schema. Explain the relationships to me.]***
+![Database Schema](/assets/img/ERD.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---------------------------
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Change Log
+1.0: Product Launch
 
-### Code Splitting
+------------------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Authors
+Tanner Percival,
+Brady Camp,
+Micha Davis,
+Jeffrey Jenkins
 
-### Analyzing the Bundle Size
+------------------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### Routes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- Route documentation goes here -->
 
-### Advanced Configuration
+#### `/routeA`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<!-- Sample for an endpoint below. Refer to sample-README.md for more -->
+<!-- - GET : `/magikarp[/:id]`
+  - Parameters
+    - Optional: an `id` param will specify a single record to return.
+  - Response
+    - status `200`, and a JSON body which is an array of all records in the table if `id` **is not** present, or a single record if `id` **is** present.
+      - body: `{ // refer to schema }`
+    - status `500`, `id` param is invalid. -->
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
