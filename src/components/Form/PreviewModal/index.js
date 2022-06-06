@@ -1,17 +1,15 @@
-import { Modal } from 'react-bootstrap'
-import StoryDisplay from '../../Explore/StoryDisplay'
+import { Modal } from 'react-bootstrap';
+import StoryDisplay from '../../Explore/StoryDisplay';
 
 /**
- * 
+ *
  * @param {*} props
  * data entered into the form that was ggregated in the parent component Form/index.js
- * @returns 
+ * @returns
  * Modal popup that displayes a preview of what the site might look like after the form is complete and the submission is in.
  */
 function PreviewModal(props) {
-
   //handle show and close
-
 
   return (
     <div data-testid="prev-modal">
@@ -24,7 +22,7 @@ function PreviewModal(props) {
         </Modal.Body>
       </Modal>
     </div>
-  )
+  );
 }
 
 export default PreviewModal;

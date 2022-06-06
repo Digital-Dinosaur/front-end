@@ -6,15 +6,11 @@ import store from '../../store';
 import Header from './index.js';
 
 describe('Testing the Header', () => {
-
   test('Should render the Header', () => {
-
     render(
-    
       <Provider store={store}>
         <Header />
       </Provider>
-    
     );
 
     let element = screen.getByTestId('header');

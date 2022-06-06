@@ -5,9 +5,7 @@ import store from '../../../store';
 import SignIn from './index.js';
 
 describe('Testing the SignIn', () => {
-
   test('Should render the SignIn', () => {
-
     render(
       <Provider store={store}>
         <SignIn />
@@ -19,5 +17,4 @@ describe('Testing the SignIn', () => {
     expect(element).toBeInTheDocument();
     expect(element).toBeTruthy();
   });
-
 });
