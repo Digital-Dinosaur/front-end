@@ -4,9 +4,7 @@ import React from 'react';
 import Recents from './index.js';
 
 describe('Testing the Recents', () => {
-
   test('Should render the Recents', () => {
-
     render(<Recents />);
 
     let element = screen.getByTestId('recents');

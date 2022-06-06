@@ -28,8 +28,8 @@ export default profileSlice;
 export const { setProfile } = profileSlice.actions;
 
 // THUNK
-export const getProfile = (profileId) => async (dispatch) => {
-  console.log('checking profile id ', profileId);
+export const getProfile = (profileId) => async (dispatch, getState) => {
+  // console.log('checking profile id ', profileId);
   if (profileId) {
     try {
       let profileData = await axios.get(`${API_URL}/profile/${profileId}`);
@@ -41,7 +41,7 @@ export const getProfile = (profileId) => async (dispatch) => {
       let contributionsStories = await _getStoriesFromArray(profile.contributions);
 
       dispatch(
-        setProfile({ profile, historyStories, favoritesStories, contributionsStories })
+        setProfile({ profile, historyStories, favoritesStories, contributionsStories }),
       );
     } catch (e) {
       console.error(e);
@@ -50,47 +50,45 @@ export const getProfile = (profileId) => async (dispatch) => {
 };
 
 export const pushContributionsArray = (storyId) => async (dispatch, getState) => {
-  const { profile } = getState();
+  const { profile, auth } = getState();
   const profileId = profile.profile.id;
   const newContributions = [storyId, ...profile.profile.contributions];
-  const newData = {contributions: newContributions};
+  const newData = { contributions: newContributions };
   if (profileId) {
     try {
       console.log('Updating profile array:', storyId);
-      let response = await axios.put(`${API_URL}/profile/${profileId}`, newData);
+      let response = await axios.put(`${API_URL}/profile/${profileId}`, newData, {
+        headers: { Authorization: `Bearer ${auth.token}` },
+      });
 
-      dispatch(
-        setProfile({profile: response.data})
-      );
-      
+      dispatch(setProfile({ profile: response.data }));
     } catch (e) {
       console.error(e);
     }
   }
-}
+};
 
 export const pushHistoryArray = (storyId) => async (dispatch, getState) => {
-  const { profile } = getState();
+  const { profile, auth } = getState();
   const profileId = profile.profile.id;
   const newArray = [storyId, ...profile.profile.history];
   if (newArray.length > 5) {
     newArray.pop();
   }
-  const newData = {history: newArray};
+  const newData = { history: newArray };
   if (profileId) {
     try {
       console.log('Updating profile array:', storyId);
-      let response = await axios.put(`${API_URL}/profile/${profileId}`, newData);
+      let response = await axios.put(`${API_URL}/profile/${profileId}`, newData, {
+        headers: { Authorization: `Bearer ${auth.token}` },
+      });
 
-      dispatch(
-        setProfile({profile: response.data})
-      );
-      
+      dispatch(setProfile({ profile: response.data }));
     } catch (e) {
       console.error(e);
     }
   }
-}
+};
 
 // Helper function
 async function _getStoriesFromArray(storyIdArray) {

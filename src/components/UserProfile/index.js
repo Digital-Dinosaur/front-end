@@ -37,7 +37,6 @@ function Profile(props) {
   const profile = useSelector((state) => state.profile);
   const dispatch = useDispatch();
 
-
   useEffect(() => {
     if (auth.signedIn) {
       dispatch(getProfile(auth.id));
@@ -66,7 +65,7 @@ function Profile(props) {
             <Favorites favorites={profile.profile.favorites} />
           </Col>
           <Col className="w-50 m-4" style={{ backgroundColor: '#E95162' }}>
-            <Contributions contributions={profile.contributionStories}/>
+            <Contributions contributions={profile.contributionsStories} />
           </Col>
         </Row>
       </Container>

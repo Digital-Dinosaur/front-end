@@ -5,12 +5,12 @@
  * footer information
  */
 
-function Header(){
+function Footer(){
   return(
     <div data-testid='footer'>
-      Copyright, or something
+      &copy; Copyright 2022
     </div>
   )
 }
 
-export default Header;
+export default Footer;

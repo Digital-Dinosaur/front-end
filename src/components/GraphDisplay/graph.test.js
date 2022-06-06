@@ -6,9 +6,7 @@ import React from 'react';
 import Graph from './index.js';
 
 describe('Testing the Graph', () => {
-
   test('Should render the Graph', () => {
-
     render(
       <Provider store={store}>
         <Graph />

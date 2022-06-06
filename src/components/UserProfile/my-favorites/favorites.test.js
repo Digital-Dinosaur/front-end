@@ -4,9 +4,7 @@ import React from 'react';
 import Favorites from './index.js';
 
 describe('Testing the Favorites', () => {
-
   test('Should render the Favorites', () => {
-
     render(<Favorites />);
 
     let element = screen.getByTestId('favorites');
